@@ -9,17 +9,17 @@
         <a href="/"><img src="/images/insta_logo.png" alt="insta_logo" style="width:100px;height:100px;"></a>
     </div>
     <h1 class="topright">
-        <a href="/explore/explore.html"> explore </a>
-        <a href="/users/{{logname}}/user.html"> {{logname}} </a>
+        <a href="/explore/"> explore </a>
+        <a href="/users/{{logname}}/"> {{logname}} </a>
     </h1>
     <hr class="solid">
     {% for post in posts%}
         <div class="post_frame">
-            <a href="/users/{{post.owner}}/user.html"><img src="{{post.owner_img_url}}" alt="{{post.owner}} profile pic"
+            <a href="/users/{{post.owner}}/"><img src="{{post.owner_img_url}}" alt="{{post.owner}} profile pic"
                                            style="width:100px;height:100px;"></a>
-            <a href="/users/{{post.owner}}/user.html"> <b>{{post.owner}}</b></a>
+            <a href="/users/{{post.owner}}/"> <b>{{post.owner}}</b></a>
             <div class="post_right">
-                <a href="/posts/{{post.postid}}/post.html"> <b> {{post.timestamp}}</b> </a>
+                <a href="/posts/{{post.postid}}/"> <b> {{post.timestamp}}</b> </a>
             </div>
             <img src="{{post.img_url}}" alt="{{post.owner}} 's post img">
             <p>
@@ -30,7 +30,7 @@
                 {% endif %}
             </p>
             {% for comment in post.comments %}
-            <p><a href="/users/{{comment.owner}}/user.html"><b>{{comment.owner}}</b></a> {{comment.text}} </p>
+            <p><a href="/users/{{comment.owner}}/"><b>{{comment.owner}}</b></a> {{comment.text}} </p>
             {% endfor %}
         </div>
     {% endfor %}

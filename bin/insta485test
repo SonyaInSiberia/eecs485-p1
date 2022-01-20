@@ -1,7 +1,7 @@
 #!/bin/bash
 set -Eeuo pipefail
 set -x
-pytest tests/
+pytest -vvsx tests/
 pycodestyle insta485generator
 pydocstyle insta485generator
 pylint --disable=no-value-for-parameter setup.py insta485generator

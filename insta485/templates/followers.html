@@ -9,23 +9,23 @@
         <a href="/"><img src="/images/insta_logo.png" alt="insta_logo" style="width:100px;height:100px;"></a>
     </div>
     <h1 class="topright">
-        <a href="/explore/explore.html"> explore </a>
-        <a href="/users/{{logname}}/user.html"> {{logname}} </a>
+        <a href="/explore/"> explore </a>
+        <a href="/users/{{logname}}/"> {{logname}} </a>
     </h1>
     <h1>Followers</h1>
     {% for follow in followers %}
         <div class="middle">
             <img src="{{follow.user_img_url}}" alt = "{{follow.username}} logo" style="width:150px;height:150px;">
-            <a href="/users/{{follow.username}}/user.html"> {{follow.username}} </a>
-            <div class="text_right">
-                {% if flogname != follow.username %}
-                    {% if logname_follows_username %}
+            <a href="/users/{{follow.username}}/"> {{follow.username}} </a>
+            <h3 class="text_right">
+                {% if logname != follow.username %}
+                    {% if follow.logname_follows_username %}
                         following
                     {% else %}
                         not following
                     {% endif %}
                 {% endif %}
-            </div>
+            </h3>
         </div>
     {% endfor %}
 </body>
